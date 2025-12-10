@@ -1,5 +1,5 @@
 # 📚 Biblioteca API - CRUD de Livros
-API RESTful para gerenciamento de livros desenvolvida em TypeScript com Node.js, Express.js e TypeORM.
+API RESTful para gerenciamento de livros, em TypeScript com Node.js, Express.js e TypeORM.
 
 ## 🏗️ Arquitetura
 - **Controller:** Recebe requisições HTTP e contém lógica de negócio
@@ -19,3 +19,6 @@ npm run dev
 
 # 4. Acessar a API
 http://localhost:3000
+
+##  Testes: 
+Uso da extensão REST Client no VS Code
