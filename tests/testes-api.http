@@ -1,0 +1,52 @@
+### 1. CRIAR LIVRO
+POST http://localhost:3000/api/livros
+Content-Type: application/json
+
+{
+  "titulo": "O Senhor dos Anéis",
+  "autor": "J.R.R. Tolkien",
+  "isbn": "9788533613379",
+  "anoPublicacao": 1954,
+  "disponivel": true
+}
+
+### 2. LISTAR TODOS OS LIVROS
+GET http://localhost:3000/api/livros
+
+### 3. BUSCAR LIVRO POR ID
+GET http://localhost:3000/api/livros/1
+
+### 4. ATUALIZAR LIVRO
+PUT http://localhost:3000/api/livros/1
+Content-Type: application/json
+
+{
+  "titulo": "O Senhor dos Anéis - Edição Especial",
+  "disponivel": false
+}
+
+### 5. DELETAR LIVRO
+DELETE http://localhost:3000/api/livros/1
+
+### 6. TESTE: ISBN DUPLICADO (ERRO 409)
+POST http://localhost:3000/api/livros
+Content-Type: application/json
+
+{
+  "titulo": "Outro Livro",
+  "autor": "Outro Autor",
+  "isbn": "9788533613379", 
+  "anoPublicacao": 2020,
+  "disponivel": true
+}
+
+### 7. TESTE: VALIDAÇÃO (ERRO 400)
+POST http://localhost:3000/api/livros
+Content-Type: application/json
+
+{
+  "titulo": "",
+  "autor": "A",
+  "isbn": "123",
+  "anoPublicacao": 3000
+}
